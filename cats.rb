@@ -17,7 +17,7 @@ class Cat
     @preferred_food
   end
 
-  def meal_time #13:00
+  def meal_time #13:00hr
     @meal_time
   end
 
