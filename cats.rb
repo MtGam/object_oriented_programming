@@ -34,7 +34,7 @@ class Cat
 
 #5 Cat introduction with string method
   def meow
-    "My name is #{@cat_name} and I eat at #{eats_at}."
+    puts "My name is #{@cat_name} and I eat at #{eats_at}."
   end
 
 
