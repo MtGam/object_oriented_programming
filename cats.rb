@@ -9,19 +9,19 @@ class Cat
     @meal_time = meal_time
   end
 
-  def cat_name
+  def cat_name #Kat
     @cat_name
   end
 
-  def preferred_food
+  def preferred_food #fish
     @preferred_food
   end
 
-  def meal_time
+  def meal_time #13:00
     @meal_time
   end
 
-#4
+#4 defined meal time in am/pm on a 24hr clock
   def eats_at
     @meal_time
      if @meal_time > 12
@@ -34,7 +34,7 @@ class Cat
 
 #5 Cat introduction with string method
   def meow
-    "My name is #{@cat_name} and I eat at #{eats_at}"
+    "My name is #{@cat_name} and I eat at #{eats_at}."
   end
 
 
