@@ -3,13 +3,10 @@ class Item
 sales_tax = 0.10
 import_tax = 0.05
 
-attr_accessor :exempt
-attr_accessor :cost
-attr_accessor :name
-attr_accessor :imported
+attr_accessor :name, :cost, :exempt, :imported
 
-attr_reader :tax
-attr_reader :item_total
+attr_reader :tax, :item_total
+
 
 def initialize(name, cost, exempt, imported)
   @name = name
@@ -33,7 +30,7 @@ tax = 0
     @tax = @cost * (sales_tax + import_tax)
 
   elsif @exempt == false && @imported == false
-    @tax = @cost * (sales)
+    @tax = @cost * (sales_tax)
 end
 
  @tax = tax
