@@ -36,6 +36,6 @@ class Paperboy
 
 end
 
-tom = Paperboy.new("Tom", "even")
-tom.deliver(100, 220)
-tom.report
+tim = Paperboy.new("Tim", "even")
+tim.deliver(100, 220)
+tim.report
