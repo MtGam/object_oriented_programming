@@ -40,3 +40,5 @@ class Cat
 
 
 end
+
+cat = Cat.new("Kat", "fish", "noon",)

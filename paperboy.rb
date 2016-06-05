@@ -35,3 +35,7 @@ class Paperboy
   end
 
 end
+
+tom = Paperboy.new("Tom", "even")
+tom.deliver(100, 220)
+tom.report
