@@ -1,6 +1,6 @@
 class Item
 
-tax = 0.10
+sales_tax = 0.10
 import_tax = 0.05
 
 attr_accessor :exempt
@@ -11,18 +11,15 @@ attr_accessor :imported
 attr_reader :tax
 attr_reader :item_total
 
-def initialize(exempt, cost, name)
-  @exempt = exempt
-  @cost = cost
+def initialize(name, cost, exempt, imported)
   @name = name
+  @cost = cost
+  @exempt = exempt
   @imported = imported
   @tax = 0
   @item_total = 0
 end
 
-def calculate_total
-  @item_total = @cost + calculated_tax
-end
 
 def calculate_tax
 tax = 0
@@ -33,26 +30,34 @@ tax = 0
     @tax = @cost * (import_tax)
 
   elsif @exempt == false && @imported == true
-    @tax = @cost * (tax_sales + import_duty)
+    @tax = @cost * (sales_tax + import_tax)
 
   elsif @exempt == false && @imported == false
-    @tax = @cost * (tax_sales)
+    @tax = @cost * (sales)
 end
+
  @tax = tax
  return tax
 
+
+ def calculate_total
+   @item_total = @cost + calculated_tax
+ end
+
+
+
 end
 
 
-
-class Receipt
-
-  attr_reader :items
-
-  def initialize()
-
-    @items = []
-
-  def add(item)
-    @items << items
-  end
+#
+# class Receipt
+#
+#   attr_reader :items
+#
+#   def initialize()
+#
+#     @items = []
+#
+#   def add(item)
+#     @items << items
+#   end
