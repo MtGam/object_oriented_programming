@@ -42,18 +42,23 @@ class Item
 
 end
 
-#
-# class Receipt
-#
-#   attr_reader :items
-#
-#   def initialize()
-#
-#     @items = []
-#
-#   def add(item)
-#     @items << items
-#   end
+
+class Receipt
+
+  attr_reader :items
+
+  def initialize
+    @items = []
+    @total_tax = 0
+    @total_cost = 0
+
+  def add(item)
+    @items << item
+  end
+
+
+end
+
 
 
 book = Item.new('book', 12.49, true, false)
@@ -66,4 +71,4 @@ perfume1 = Item.new('Chanel', 54.65, false, true)
 perfume2 = Item.new('Swiss', 27.99, false, true)
 perfume3 = Item.new('Nautica',18.99, false, false)
 head_pills = Item.new('Advil', 9.75, true, false)
-box_chocolate2 = Item.new('Lindt2', 11,25, false, true)
+box_chocolate2 = Item.new('Lindt2', 11.25, false, true)
